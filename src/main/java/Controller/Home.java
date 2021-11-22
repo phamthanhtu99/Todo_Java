@@ -1,5 +1,8 @@
 package Controller;
 
+import Service.Impl.TodoServiceImpl;
+import Service.TodoService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,8 @@ import java.io.IOException;
 public class Home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("views/main.jsp").forward(req,resp);
+        TodoService todoService= new TodoServiceImpl();
+
+        req.getRequestDispatcher("/views/main.jsp").forward(req,resp);
     }
 }

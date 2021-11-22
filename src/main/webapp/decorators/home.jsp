@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="/common/tablig.jsp"%>
+<%@include file="/common/tablig.jsp" %>
     <html>
     <head>
         <title>Title</title>
@@ -21,6 +21,6 @@
             <%@ include file="/common/footer.jsp" %>
 
         </section>
-
+        <script src="<c:url value="/template/todomvc-common/base.js"/>"></script>
     </body>
     </html>
